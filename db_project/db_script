@@ -1,0 +1,45 @@
+CREATE DATABASE NOTATALLVULNERABLEDB
+GO
+
+USE NOTATALLVULNERABLEDB
+GO
+
+CREATE TABLE Users
+(
+     Id int NOT NULL,
+     Name nvarchar(50) NOT NULL,
+     CPF nvarchar(15) NOT NULL,
+     Salary int,
+     PRIMARY KEY (Id)
+)
+GO
+
+INSERT INTO Users VALUES ('1', 'admin', '15427894632', 60000)
+INSERT INTO Users VALUES ('2', 'Jose', '17264827264', 45000)
+INSERT INTO Users VALUES ('Joao', '18228746354', 45000)
+INSERT INTO Users VALUES ('Adriano', '18273647231', 70000)
+INSERT INTO Users VALUES ('Jena',, 45000)
+INSERT INTO Users VALUES ('Maria',, '82736272612', 30000)
+INSERT INTO Users VALUES ('Carla',, 45000)
+INSERT INTO Users VALUES ('Rodrigo',, 30000)
+INSERT INTO Users VALUES ('Livia',, 35000)
+INSERT INTO Users VALUES ('Nathalia',, 80000)
+GO
+
+CREATE TABLE Credit_Cards
+(
+    Id int NOT NULL,
+    UserId int NOT NULL,
+    CreditCardNumber nvarchar(50) NOT NULL,
+    SecurityNumber int,
+    CreditCardPIN int,
+    PRIMARY KEY (Id),
+    FOREIGN KEY (UserId) REFERENCES Users(Id)  	
+)
+GO
+
+INSERT INTO CreditCards VALUES ('1', '', '', '')
+INSERT INTO CreditCards VALUES ('3', '', '', '')
+INSERT INTO CreditCards VALUES ('2', '', '', '')
+INSERT INTO CreditCards VALUES ('5', '', '', '')
+
